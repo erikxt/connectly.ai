@@ -1,0 +1,4 @@
+cert/*.crt
+cert/*.key
+.vscode
+__debug*
