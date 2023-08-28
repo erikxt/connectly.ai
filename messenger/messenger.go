@@ -23,6 +23,7 @@ func init() {
 }
 
 func messageReceived(event messenger.Event, opts messenger.MessageOpts, msg messenger.ReceivedMessage) {
+	logrus.Info(fmt.Sprintf("Message Received: %+v", msg))
 	var messageService = &service.MessageService{}
 	attachments, err := json.Marshal(msg.Attachments)
 	if err != nil {
